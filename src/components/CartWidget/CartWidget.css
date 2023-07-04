@@ -1,0 +1,17 @@
+.cart{
+    width: 24px;
+    cursor: pointer;
+}
+.cantidad{
+    position: relative;
+    top: -0.6rem;
+    right: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    color: #fff;
+}
