@@ -1,21 +1,21 @@
 import React from 'react'
 import './navbar.css'
 import Coffee from '../../assets/img/coffee.png'
-import CartWidget from '../CartWidget/CartWidget'
 
-
-export default function Navbar() {
+export default function Navbar({ children }) {
     return (
         <nav className='nav'>
             <div className='marca'>
-                <img src={Coffee} alt="coffe-logo" className='logo' />
-                <span className='logo-title'>Coffe Tech</span>
+                <a href="/">
+                    <img src={Coffee} alt="coffe-logo" className='logo' />
+                    <span className='logo-title'>Coffee Tech</span>
+                </a>
             </div>
             <div className='links'>
-                <span>Cápsulas</span> 
-                <span>Instantaneo</span> 
-                <span>Granos</span> 
-                <CartWidget/>
+                <a href='#'>Cápsulas</a>
+                <a href='#'>Instantaneo</a>
+                <a href='#'>Granos</a>
+                {children}
             </div>
         </nav>
     )
