@@ -13,7 +13,7 @@ export default function Navbar({ children }) {
             </div>
             <div className='links'>
                 <a href='#'>Cápsulas</a>
-                <a href='#'>Instantaneo</a>
+                <a href='#'>Instantáneo</a>
                 <a href='#'>Granos</a>
                 {children}
             </div>
