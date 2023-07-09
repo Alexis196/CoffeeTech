@@ -1,14 +1,11 @@
 import Navbar from './components/Navbar/Navbar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import CartWidget from './components/CartWidget/CartWidget'
 
 function App() {
 
   return (
     <>
-      <Navbar>
-        <CartWidget/>
-      </Navbar>
+      <Navbar/>
       <ItemListContainer greeting='Bienvenidos a Coffee Tech'/>
     </>
   )

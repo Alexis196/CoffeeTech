@@ -1,8 +1,9 @@
 import React from 'react'
 import './navbar.css'
 import Coffee from '../../assets/img/coffee.png'
+import CartWidget from '../CartWidget/CartWidget'
 
-export default function Navbar({ children }) {
+export default function Navbar() {
     return (
         <nav className='nav'>
             <div className='marca'>
@@ -15,7 +16,7 @@ export default function Navbar({ children }) {
                 <a href='#'>Cápsulas</a>
                 <a href='#'>Instantáneo</a>
                 <a href='#'>Granos</a>
-                {children}
+                <CartWidget/>
             </div>
         </nav>
     )
