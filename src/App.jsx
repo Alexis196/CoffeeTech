@@ -5,8 +5,8 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <ItemListContainer/>
+      <Navbar/>
+      <ItemListContainer greeting='Bienvenidos a Coffee Tech'/>
     </>
   )
 }

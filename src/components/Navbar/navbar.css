@@ -8,9 +8,10 @@
     background-color: #E6CCE6;
     color: #000000;
 }
-.marca{
+.marca>a{
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 .logo-title{
@@ -23,6 +24,7 @@
 .logo{
     width: 58px;
     height: 58px;
+    margin-bottom: 6px;
 }
 
 .links{
@@ -30,11 +32,12 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.links>a{
+    text-decoration: none;
     font-family: 'Merienda', cursive;
     font-weight: 400;
     color: #654321;
-}
-
-.links>span{
     cursor: pointer;
 }
