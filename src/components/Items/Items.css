@@ -1,0 +1,11 @@
+.container{
+    width: 300px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.container>img{
+    width: 100%;
+}

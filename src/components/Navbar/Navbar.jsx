@@ -1,6 +1,6 @@
 import React from 'react'
 import './navbar.css'
-import Coffee from '../../assets/img/coffee.png'
+import Coffee from '../../assets/img/CoffeeTech.png'
 import CartWidget from '../CartWidget/CartWidget'
 
 export default function Navbar() {
