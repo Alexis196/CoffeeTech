@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<ItemListContainer greeting='Bienvenidos a Coffee Tech' />} />
-        <Route path='/descripcion' element={<Descripcion/>}/>
+        <Route path='/item/:id' element={<Descripcion />} />
       </Routes>
     </BrowserRouter>
   )
