@@ -1,4 +1,4 @@
-const coffee = {
+{
     "productos": [
         {
             "id": 1,
@@ -110,6 +110,4 @@ const coffee = {
         }
     ]
 
-};
-
-export default coffee;
+}
