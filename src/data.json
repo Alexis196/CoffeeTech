@@ -2,9 +2,9 @@
     "productos": [
         {
             "id": 1,
-            "nombre": "Café en cápsula 1",
+            "nombre": "Café en cápsula",
             "descripcion": "Deliciosa cápsula de café para disfrutar en cualquier momento del día.",
-            "imagen": "https://tiendadecafeyte.com.ar/3991-large_default/capsulas-cafe-la-virginia-intenso-nespresso-caja-10u.jpg",
+            "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/223970-800-auto?v=637875225840770000&width=800&height=auto&aspect=true",
             "categoria": "cafe_capsula",
             "category_id": 1,
             "precio": 10.99
@@ -22,7 +22,7 @@
             "id": 3,
             "nombre": "Café instantáneo 1",
             "descripcion": "Café instantáneo de alta calidad con un sabor intenso y profundo.",
-            "imagen": "https://tiendadecafeyte.com.ar/3991-large_default/capsulas-cafe-la-virginia-intenso-nespresso-caja-10u.jpg",
+            "imagen": "https://arcordiezb2c.vteximg.com.br/arquivos/ids/157345/CAFE-NESCAFE-CLASICO-1-2053.jpg?v=637432177762670000",
             "categoria": "cafe_instantaneo",
             "category_id": 2,
             "precio": 8.99
@@ -31,25 +31,25 @@
             "id": 4,
             "nombre": "Café instantáneo 2",
             "descripcion": "Un café instantáneo suave y equilibrado para disfrutar en cualquier momento.",
-            "imagen": "https://tiendadecafeyte.com.ar/3991-large_default/capsulas-cafe-la-virginia-intenso-nespresso-caja-10u.jpg",
+            "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/798/865/products/119418857-95f1a6958fe452323916639277389047-640-0.webp",
             "categoria": "cafe_instantaneo",
             "category_id": 2,
             "precio": 9.99
         },
         {
             "id": 5,
-            "nombre": "Café en granos 1",
+            "nombre": "Café en granos",
             "descripcion": "Café en granos de origen seleccionado y tueste perfecto para un aroma y sabor excepcionales.",
-            "imagen": "https://tiendadecafeyte.com.ar/3991-large_default/capsulas-cafe-la-virginia-intenso-nespresso-caja-10u.jpg",
+            "imagen": "https://s.lamason.us/bonafide.com.ar/media/2022/05/06132453/granos-negro-1k-1-1-1-1-1-1-1-1.jpg",
             "categoria": "cafe_granos",
             "category_id": 3,
             "precio": 15.99
         },
         {
             "id": 6,
-            "nombre": "Café en granos 2",
+            "nombre": "Café en grano y molido",
             "descripcion": "Un café en granos con un sabor intenso y notas dulces, perfecto para los amantes del café.",
-            "imagen": "https://tiendadecafeyte.com.ar/3991-large_default/capsulas-cafe-la-virginia-intenso-nespresso-caja-10u.jpg",
+            "imagen": "https://www.nescafe.com/ar/sites/default/files/NESC_GOLD_100g_Desktop-Recovered_0.png",
             "categoria": "cafe_granos",
             "category_id": 3,
             "precio": 14.99
