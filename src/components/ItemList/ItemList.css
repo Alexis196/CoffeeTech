@@ -1,8 +1,9 @@
 .container{
-    margin-bottom: 1rem;
+    margin: 1rem;
     padding: .5rem;
     width: 230px;
-    background-color: rgb(145, 145, 145);
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px rgb(145, 145, 145), -2px -2px 3px rgb(145, 145, 145); ;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
