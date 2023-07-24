@@ -1,0 +1,15 @@
+.detalle{
+    width: 70%;
+    height: 80vh;
+    margin: 1rem auto;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.detalle>img{
+    width: 280px;
+    height: 330px;
+}
