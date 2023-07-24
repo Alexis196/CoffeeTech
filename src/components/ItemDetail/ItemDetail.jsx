@@ -1,7 +1,7 @@
 import data from '../../data'
 import { useParams } from 'react-router-dom'
 
-function Descripcion() {
+function ItemDetail(product) {
     const { id } = useParams()
     const item = data.productos.find((item) => item.id === parseInt(id))
 
@@ -19,4 +19,4 @@ function Descripcion() {
     );
 }
 
-export default Descripcion;
+export default ItemDetail;

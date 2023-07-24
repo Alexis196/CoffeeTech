@@ -1,7 +1,8 @@
-import {Link} from 'react-router-dom'
-import './navbar.css'
-import Coffee from '../../assets/img/CoffeeTech.png'
-import CartWidget from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import './navbar.css';
+import Coffee from '../../assets/img/CoffeeTech.png';
+import CartWidget from '../CartWidget/CartWidget';
 
 export default function Navbar() {
     return (
@@ -13,11 +14,11 @@ export default function Navbar() {
                 </Link>
             </div>
             <div className='links'>
-                <Link to='#'>Cápsulas</Link>
-                <Link to='#'>Instantáneo</Link>
-                <Link to='#'>Granos</Link>
+                <Link to='/category/:id'>Cápsulas</Link>
+                <Link to='/category/:id'>Instantáneo</Link>
+                <Link to='/category/:id'>Granos</Link>
                 <CartWidget/>
             </div>
         </nav>
-    )
+    );
 }
