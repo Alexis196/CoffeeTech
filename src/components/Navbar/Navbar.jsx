@@ -14,9 +14,9 @@ export default function Navbar() {
                 </Link>
             </div>
             <div className='links'>
-                <Link to='/category/:id'>Cápsulas</Link>
-                <Link to='/category/:id'>Instantáneo</Link>
-                <Link to='/category/:id'>Granos</Link>
+                <Link to='/category/capsula'>Cápsulas</Link>
+                <Link to='/category/instantaneo'>Instantáneo</Link>
+                <Link to='/category/granos'>Granos</Link>
                 <CartWidget/>
             </div>
         </nav>
