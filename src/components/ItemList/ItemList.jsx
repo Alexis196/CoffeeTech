@@ -10,7 +10,7 @@ function ItemList({product}) {
             <div className='container' key={item.id}>
                 <img src={item.imagen} alt={item.nombre} />
                 <h3>{item.nombre}</h3>
-                <Anchor to={`/item/${item.id}`}>Ver más</Anchor>
+                <Anchor className='anchor' to={`/item/${item.id}`}>Ver más</Anchor>
             </div>
         ))}
     </>

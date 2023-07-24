@@ -4,6 +4,7 @@
 }
 .general-cont{
     width: 80%;
+    margin-bottom: 1rem;
     margin: auto;
     display: flex;
     justify-content: center;

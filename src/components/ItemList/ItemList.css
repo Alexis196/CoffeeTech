@@ -1,7 +1,8 @@
 .container{
     margin-bottom: 1rem;
+    padding: .5rem;
     width: 230px;
-    border: 1px solid red;
+    background-color: rgb(145, 145, 145);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -9,4 +10,9 @@
 }
 .container>img{
     width: 100%;
+}
+.anchor{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
 }

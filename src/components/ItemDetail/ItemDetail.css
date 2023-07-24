@@ -1,7 +1,7 @@
 .detalle{
     width: 70%;
     height: 80vh;
-    margin: 1rem auto;
+    margin: auto;
     border: 1px solid red;
     display: flex;
     justify-content: center;
