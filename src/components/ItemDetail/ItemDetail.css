@@ -1,0 +1,16 @@
+.detalle{
+    width: 70%;
+    height: 80vh;
+    margin: 1rem auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px rgb(145, 145, 145), -2px -2px 3px rgb(145, 145, 145); ;
+}
+.detalle>img{
+    width: 280px;
+    height: 330px;
+}

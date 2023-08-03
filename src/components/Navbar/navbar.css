@@ -36,8 +36,16 @@
 
 .links>a{
     text-decoration: none;
+    width: auto;
+    padding: 3px 7px;
     font-family: 'Merienda', cursive;
     font-weight: 400;
     color: #654321;
-    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.4s;
+}
+.links>a:hover {
+    color: #FFFFFF;
+    background-color: #654321; 
+    border-radius: 5px;
 }
