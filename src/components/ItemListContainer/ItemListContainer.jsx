@@ -16,8 +16,6 @@ export default function ItemListContainer({ greeting }) {
                 setLoading(true);
                 await new Promise(resolve => setTimeout(resolve, 1000));
                 const filterData = data.productos.filter(item => id === item.categoria);
-                console.log(filterData);
-
                 if (id && filterData.length > 0) {
                     setProduct(filterData);
                 } else {

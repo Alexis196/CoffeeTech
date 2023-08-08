@@ -2,26 +2,34 @@ import data from '../../data'
 import { useParams } from 'react-router-dom'
 import './ItemDetail.css'
 import { useState } from 'react'
+import { useContext } from 'react'
+import { CartContext } from '../../context/cartContext';
 
-function ItemDetail(product) {
-    let [count, setCount] = useState(0)
-    const { id } = useParams()
-    const item = data.productos.find((item) => item.id === parseInt(id))
+function ItemDetail() {
+    let [count, setCount] = useState(1);
+    const { id } = useParams();
+    const item = data.productos.find((item) => item.id === parseInt(id));
+    const { addCart } = useContext(CartContext);
 
     if (!item) {
         return <div>Producto no encontrado</div>;
     }
+
     function handleDis() {
-        if (count > 0) {
+        if (count > 1) {
             setCount(count - 1);
-        } else {
-            setCount(0);
         }
     }
+
     function handleAdd() {
         setCount(count + 1);
     }
 
+    function handleAddCart() {
+        addCart(item, count);
+        console.log('Producto agregado al carrito');
+    }
+    
     return (
         <div className='detalle'>
             <img src={item.imagen} alt={item.nombre} />
@@ -33,7 +41,9 @@ function ItemDetail(product) {
                 <span id='count'>{count}</span>
                 <button onClick={handleAdd}>+</button>
             </div>
-            <button>Agregar al Carrito</button>
+            <button onClick={handleAddCart}>
+                Agregar al Carrito
+            </button>
         </div>
     );
 }
