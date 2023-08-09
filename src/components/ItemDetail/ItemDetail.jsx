@@ -28,6 +28,7 @@ function ItemDetail() {
     function handleAddCart() {
         addCart(item, count);
         console.log('Producto agregado al carrito');
+        console.log(item, count);
     }
     
     return (

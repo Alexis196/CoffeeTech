@@ -1,0 +1,18 @@
+.modal{
+    width: 300px;
+    height: auto;
+    background-color: rgb(179, 178, 178);
+}
+.items-modal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+.items-modal img{
+    width: 64px;
+}
+.modal p {
+    display: flex;
+    justify-content: center;
+}
