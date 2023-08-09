@@ -3,7 +3,7 @@
     padding: .5rem;
     width: 230px;
     border-radius: 2px;
-    box-shadow: 2px 2px 3px rgb(145, 145, 145), -2px -2px 3px rgb(145, 145, 145); ;
+    border: 1px solid #0000008a;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

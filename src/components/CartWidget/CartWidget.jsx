@@ -8,7 +8,7 @@ export default function CartWidget() {
     const [modal, setModal] = useState(false)
     const { totalItemCart } = useContext(CartContext);
 
-    function handleModal() {
+    function handleModal(event) {
         setModal(!modal)
     }
 

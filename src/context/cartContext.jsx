@@ -24,6 +24,16 @@ function CartContextProvider(props) {
         }
     }
 
+    function deleteItem(){
+        const newCart = cart.map(existingItem => console.log(existingItem))
+    }
+
+    function clearCart(event){
+        alert('Ups! El carrito está vacío')
+        event.stopPropagation()
+        return setCart([])
+    }
+
     function totalItemCart() {
         let total = 0
         cart.forEach((item) => {
@@ -33,7 +43,7 @@ function CartContextProvider(props) {
     }
 
     return (
-        <CartContext.Provider value={{ cart, addCart, totalItemCart }}>
+        <CartContext.Provider value={{ cart, addCart, totalItemCart, clearCart, deleteItem }}>
             {props.children}
         </CartContext.Provider>
     );

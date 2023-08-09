@@ -6,6 +6,7 @@
     height: 64px;
     padding: 1rem 2rem;
     background-color: #E6CCE6;
+    border-bottom: 1px solid #0000002f;
     color: #000000;
 }
 .marca>a{
