@@ -11,8 +11,8 @@ function ModalCart() {
     return (
         <div className='modal'>
             {cart.length ?
-                (cart.map((item, index) => (
-                    <div className='items-modal' key={index}>
+                (cart.map((item) => (
+                    <div className='items-modal' key={item.id}>
                         <img src={item.imagen} alt={item.nombre} />
                         <span>{item.nombre}</span>
                         <span>Cantidad: {item.count}</span>

@@ -5,20 +5,12 @@ import { CartContext } from '../../context/cartContext';
 import ModalCart from '../ModalCart/ModalCart';
 
 export default function CartWidget() {
-    const [modal, setModal] = useState(false)
     const { totalItemCart } = useContext(CartContext);
 
-    function handleModal(event) {
-        setModal(!modal)
-    }
-
     return (
-        <div className='content-cart' onClick={handleModal}>
+        <div className='content-cart'>
             <img src={Cart} alt="cart" className="cart" />
             <span className="cantidad">{totalItemCart()}</span>
-            <div className='div-modal'>
-                {modal && <ModalCart />}
-            </div>
         </div>
     );
 }

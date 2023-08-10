@@ -49,3 +49,6 @@
     background-color: #654321; 
     border-radius: 5px;
 }
+.links .carrito:hover{
+    background-color: transparent;
+}

@@ -4,6 +4,8 @@ import data from '../../data';
 import './ItemListContainer.css';
 import ItemList from '../ItemList/ItemList';
 import ItemDetail from '../ItemDetail/ItemDetail';
+import Loader from '../Loader/Loader';
+
 
 export default function ItemListContainer({ greeting }) {
     let [product, setProduct] = useState([]);
@@ -34,7 +36,8 @@ export default function ItemListContainer({ greeting }) {
         <>
             <h1 className='title'>{greeting}</h1>
             <div className='general-cont'>
-                {loading ? <div>Loading...</div> : <ItemList product={product} />}
+                {loading ? <Loader/> : <ItemList product={product} />
+                }
             </div>
         </>
     );

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import './navbar.css';
-import Coffee from '../../assets/img/CoffeeTech.png';
+import Coffee from '../../assets/img/CoffeeTech.png'
 import CartWidget from '../CartWidget/CartWidget';
 
 export default function Navbar() {
@@ -17,7 +17,7 @@ export default function Navbar() {
                 <Link to='/category/capsula'>Cápsulas</Link>
                 <Link to='/category/instantaneo'>Instantáneo</Link>
                 <Link to='/category/granos'>Granos</Link>
-                <CartWidget/>
+                <Link className='carrito' to='/cart'> <CartWidget/> </Link>
             </div>
         </nav>
     );
