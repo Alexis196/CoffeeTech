@@ -1,0 +1,14 @@
+.div-carrito{
+    width: 80%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.carrito-vacio{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
