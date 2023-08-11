@@ -1,14 +1,17 @@
-import React from 'react'
+import './ItemCart.css'
+import { useContext } from "react";
+import { CartContext } from '../../context/cartContext';
 
 function ItemCart(props) {
-    const item = props
+    const item = props;
+
     return (
-        <div>
+        <div className="contenedor-item">
             <img src={item.imagen} alt={item.nombre} />
             <span>{item.nombre}</span>
             <span>Cantidad: {item.count}</span>
         </div>
-    )
+    );
 }
 
-export default ItemCart
+export default ItemCart;

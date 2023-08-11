@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
 function ItemList({product}) {
+
     return(
     <>
         {product.map((item) => (

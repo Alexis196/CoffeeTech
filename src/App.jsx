@@ -3,7 +3,11 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ItemDetail from './components/ItemDetail/ItemDetail'
 import Cart from './components/Cart/Cart'
+import ErrorPage from './components/ErrorPage/ErrorPage'
 import { CartContextProvider } from './context/cartContext';
+
+import { initializeApp } from "firebase/app";
+
 
 function App() {
   return (
@@ -15,6 +19,7 @@ function App() {
           <Route path='/item/:id' element={<ItemDetail />} />
           <Route path='/category/:id' element={<ItemListContainer />} />
           <Route path='/cart' element={<Cart/>}/>
+          <Route path='*' element={<ErrorPage/>}/>
         </Routes>
       </BrowserRouter>
     </CartContextProvider>

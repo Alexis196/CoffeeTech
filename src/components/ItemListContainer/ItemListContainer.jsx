@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import data from '../../data';
 import './ItemListContainer.css';
 import ItemList from '../ItemList/ItemList';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import Loader from '../Loader/Loader';
+import { asyncdata } from '../../services/firebase';
 
 
 export default function ItemListContainer({ greeting }) {
@@ -13,15 +13,15 @@ export default function ItemListContainer({ greeting }) {
     const { id } = useParams();
 
     useEffect(() => {
-        async function asyncData() {
+        async function data() {
             try {
                 setLoading(true);
-                await new Promise(resolve => setTimeout(resolve, 1000));
-                const filterData = data.productos.filter(item => id === item.categoria);
+                const productData = await asyncdata();
+                const filterData = productData.filter(item => id === item.categoria);
                 if (id && filterData.length > 0) {
                     setProduct(filterData);
                 } else {
-                    setProduct(data.productos);
+                    setProduct(productData);
                 }
                 setLoading(false);
             } catch (error) {
@@ -29,7 +29,7 @@ export default function ItemListContainer({ greeting }) {
                 setLoading(false);
             }
         }
-        asyncData();
+        data();
     }, [id]);
 
     return (

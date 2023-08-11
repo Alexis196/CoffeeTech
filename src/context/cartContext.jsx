@@ -4,7 +4,7 @@ const CartContext = createContext({ cart: 0 });
 
 function CartContextProvider(props) {
     const [cart, setCart] = useState([])
-    
+
     function addCart(item, count) {
         if (count > 0) {
             const existingItem = cart.find(existingItem => existingItem.id === item.id);
@@ -19,13 +19,22 @@ function CartContextProvider(props) {
                 const newCart = [...cart, newItemInCart];
                 setCart(newCart);
             }
-        } else {
-            console.log("Debes seleccionar al menos una cantidad.");
         }
     }
 
-    function deleteItem(){
-        const newCart = cart.map(existingItem => console.log(existingItem))
+    function deleteItem(item) {
+        const newCart = cart.map(cartItem => {
+                if (cartItem.id === item.id) {
+                    if (cartItem.count > 1) {
+                        return { ...cartItem, count: cartItem.count - 1 };
+                    } else {
+                        return null;
+                    }
+                }
+                return cartItem;
+            })
+            .filter(cartItem => cartItem !== null);
+        setCart(newCart);
     }
 
     function clearCart(event){
