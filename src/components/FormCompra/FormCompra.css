@@ -21,11 +21,13 @@ fieldset span{
 }
 .enviar{
     align-self: flex-end;
-    width: 100px;
+    width: 142px;
     height: 28px;
-    border: 1px solid #50d350;
+    padding: 5px;
+    border: 1px solid #000;
     border-radius: 3px;
-    background-color: transparent;
+    background-color: #04a304;;
     font-size: 16px;
     font-weight: bold;
+    color: #fff;
 }

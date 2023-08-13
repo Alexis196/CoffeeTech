@@ -33,12 +33,12 @@ export default function ItemListContainer({ greeting }) {
     }, [id]);
 
     return (
-        <>
+        <div className='index'>
             <h1 className='title'>{greeting}</h1>
             <div className='general-cont'>
                 {loading ? <Loader/> : <ItemList product={product} />
                 }
             </div>
-        </>
+        </div>
     );
 }

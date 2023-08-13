@@ -39,19 +39,25 @@ function ItemDetail() {
     }
 
     return (
-        <div className='detalle'>
-            <img src={product.imagen} alt={product.nombre} />
-            <h3>{product.nombre}</h3>
-            <p>Precio: {product.precio}</p>
-            <p>{product.descripcion}</p>
-            <div>
-                <button onClick={handleDis}>-</button>
-                <span id='count'>{count}</span>
-                <button onClick={handleAdd}>+</button>
+        <div className='content-detail'>
+            <div className='detalle'>
+                <img src={product.imagen} alt={product.nombre} />
+                <div className='info-product'>
+                    <h3>{product.nombre}</h3>
+                    <p>{product.descripcion}</p>
+                    <p>Precio: {product.precio}</p>
+                    <p>Stock: {product.stock}</p>
+                    <div className='contador'>
+                        <span>Cantidad: </span>
+                        <button onClick={handleDis}>-</button>
+                        <span className='count'>{count}</span>
+                        <button onClick={handleAdd}>+</button>
+                    </div>
+                    <button className='add-cart' onClick={handleAddCart}>
+                        Agregar al Carrito
+                    </button>
+                </div>
             </div>
-            <button onClick={handleAddCart}>
-                Agregar al Carrito
-            </button>
         </div>
     );
 }

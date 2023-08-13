@@ -4,7 +4,8 @@ import {
     collection,
     getDocs,
     doc,
-    getDoc
+    getDoc,
+    addDoc
 } from "firebase/firestore";
 
 
@@ -40,4 +41,10 @@ async function getProductData(id) {
     }
 }
 
-export { asyncdata, getProductData }
+async function createOrder(dataUser) {
+    const collectionRef = collection(db, "orders")
+    const docCreated = await addDoc(collectionRef, dataUser)
+    return (docCreated.id)
+}
+
+export { asyncdata, getProductData, createOrder }

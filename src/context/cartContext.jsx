@@ -8,7 +8,7 @@ function CartContextProvider(props) {
     function addCart(item, count) {
         if (count > 0) {
             const existingItem = cart.find(existingItem => existingItem.id === item.id);
-    
+
             if (existingItem) {
                 const newCart = cart.map(existingItem =>
                     existingItem.id === item.id ? { ...existingItem, count: existingItem.count + count } : existingItem
@@ -24,22 +24,20 @@ function CartContextProvider(props) {
 
     function deleteItem(item) {
         const newCart = cart.map(cartItem => {
-                if (cartItem.id === item.id) {
-                    if (cartItem.count > 1) {
-                        return { ...cartItem, count: cartItem.count - 1 };
-                    } else {
-                        return null;
-                    }
+            if (cartItem.id === item.id) {
+                if (cartItem.count > 1) {
+                    return { ...cartItem, count: cartItem.count - 1 };
+                } else {
+                    return null;
                 }
-                return cartItem;
-            })
+            }
+            return cartItem;
+        })
             .filter(cartItem => cartItem !== null);
         setCart(newCart);
     }
 
-    function clearCart(event){
-        alert('Ups! El carrito está vacío')
-        event.stopPropagation()
+    function clearCart(event) {
         return setCart([])
     }
 
@@ -51,8 +49,33 @@ function CartContextProvider(props) {
         return total;
     }
 
+    function getPriceProduct(productId) {
+        let total = 0;
+        cart.forEach((item) => {
+            if (item.id === productId) {
+                total += parseFloat(item.precio) * item.count;
+            }
+        });
+        return total;
+    }
+
+    function getTotalPriceInCart() {
+        let total = 0;
+        cart.forEach((item) => {
+            total += parseFloat(item.precio) * item.count;
+        });
+        return total;
+    }
+
     return (
-        <CartContext.Provider value={{ cart, addCart, totalItemCart, clearCart, deleteItem }}>
+        <CartContext.Provider value={{ 
+            cart,
+            addCart, 
+            totalItemCart, 
+            clearCart, 
+            deleteItem,
+            getPriceProduct,
+            getTotalPriceInCart }}>
             {props.children}
         </CartContext.Provider>
     );

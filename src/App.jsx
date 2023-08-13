@@ -19,9 +19,9 @@ function App() {
           <Route path='/' element={<ItemListContainer greeting='Bienvenidos a Coffee Tech' />} />
           <Route path='/item/:id' element={<ItemDetail />} />
           <Route path='/category/:id' element={<ItemListContainer />} />
-          <Route path='/cart' element={<Cart/>}/>
-          <Route path='/checkout' element={<Checkout/>}/>
-          <Route path='*' element={<ErrorPage/>}/>
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/checkout' element={<Checkout />} />
+          <Route path='*' element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
     </CartContextProvider>

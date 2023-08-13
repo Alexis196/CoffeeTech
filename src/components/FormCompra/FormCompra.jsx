@@ -1,18 +1,15 @@
+import React, { useRef, useState } from 'react';
 import './FormCompra.css'
-import { useRef, useState } from 'react';
 
-function FormCompra() {
-    const nombre = useRef()
-    const apellido = useRef()
-    const email = useRef()
-    const celular = useRef()
-    const direccion = useRef()
-    const cP = useRef()
+function FormCompra({ onSubmit }) {
+    const nombre = useRef();
+    const apellido = useRef();
+    const email = useRef();
+    const celular = useRef();
+    const direccion = useRef();
+    const cP = useRef();
 
-    const [datosUsuario, setDatosUsuario] = useState({})
-    console.log(datosUsuario)
-
-    function handleForm(e){
+    function handleForm(e) {
         e.preventDefault();
 
         const dataUser = {
@@ -23,7 +20,7 @@ function FormCompra() {
             direccion: direccion.current.value,
             codigoP: cP.current.value,
         };
-        setDatosUsuario(dataUser)
+        onSubmit(dataUser);
         e.target.reset()
     }
 
@@ -31,29 +28,29 @@ function FormCompra() {
         <form onSubmit={handleForm} className='form'>
             <fieldset className='campos-form'>
                 <label htmlFor="name">Nombre: <span>*</span> </label>
-                <input type="text" id='name' placeholder='Andrés' ref={nombre}/>
+                <input type="text" id='name' placeholder='Andrés' ref={nombre} required/>
             </fieldset>
             <fieldset className='campos-form'>
                 <label htmlFor="surname">Apellido: <span>*</span> </label>
-                <input type="text" id='surname' placeholder='Gonzalez' ref={apellido}/>
+                <input type="text" id='surname' placeholder='Gonzalez' ref={apellido} required/>
             </fieldset>
             <fieldset className='campos-form'>
                 <label htmlFor="mail">Email: <span>*</span> </label>
-                <input type="mail" id='mail' placeholder='Email@gmail.com' ref={email}/>
+                <input type="email" id='mail' placeholder='Email@gmail.com' ref={email} required/>
             </fieldset>
             <fieldset className='campos-form'>
                 <label htmlFor="tel">Celular: <span>*</span> </label>
-                <input type="number" id='tel' placeholder='+110011223344' ref={celular}/>
+                <input type="number" id='tel' placeholder='+110011223344' ref={celular} required/>
             </fieldset>
             <fieldset className='campos-form'>
                 <label htmlFor="direccion">Dirección: <span>*</span> </label>
-                <input type="text" id='direccion' placeholder='Av Independecia...' ref={direccion}/>
+                <input type="text" id='direccion' placeholder='Av Independecia...' ref={direccion} required/>
             </fieldset>
             <fieldset className='campos-form'>
                 <label htmlFor="codigoP">Código Postal: <span>*</span> </label>
-                <input type="number" id='codigoP' placeholder='1866' ref={cP}/>
+                <input type="number" id='codigoP' placeholder='1866' ref={cP} required/>
             </fieldset>
-            <input className='enviar' type="submit" />
+            <input className='enviar' type="submit" value='Finalizar Compra'/>
         </form>
     )
 }

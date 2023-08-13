@@ -6,9 +6,8 @@ import CarritoVacio from '../../assets/img/carrito-vacio.png'
 import { Link } from 'react-router-dom'
 
 function Cart() {
-    const { cart } = useContext(CartContext)
-    const { clearCart } = useContext(CartContext)
-    const { deleteItem } = useContext(CartContext);
+    const { cart, clearCart, deleteItem, getTotalPriceInCart } = useContext(CartContext)
+    const precioTotal = getTotalPriceInCart()
 
     return (
         <section className='div-carrito'>
@@ -21,11 +20,14 @@ function Cart() {
                             <button className='quita-prod' onClick={() => deleteItem(item)}>Quitar un producto</button>
                         </div>
                     ))}
-                    <div>
-                        <button className='clear' onClick={clearCart}>Vaciar Carrito</button>
-                        <Link to='/checkout'>
-                            <button className='comprar'>Comprar</button>
-                        </Link>
+                    <div className='seccion-carrito'>
+                        <span>Total del carrito: ${precioTotal}</span>
+                        <div className='botones-carrito'>
+                            <button className='clear' onClick={clearCart}>Vaciar Carrito</button>
+                            <Link to='/checkout'>
+                                <button className='comprar'>Comprar</button>
+                            </Link>
+                        </div>
                     </div>
                 </> :
                 <img className='carrito-vacio' src={CarritoVacio} alt="carrito-vacio" />}

@@ -1,9 +1,15 @@
+.index{
+    background: linear-gradient(-120deg, #2c201b, #4d3e2c, #2c201b);
+}
 .title{
-    margin: 1.5rem;
-    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    padding-bottom: 3rem;
+    font-size: 64px;
     font-family: 'Merienda', cursive;
-    text-align: center;
-    color: #654321;
+    color: #fff;
 }
 .general-cont{
     width: 80%;
