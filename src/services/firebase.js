@@ -24,7 +24,7 @@ const db = getFirestore(appFirebase)
 async function asyncdata() {
     const productsRef = collection(db, "productos");
     const documentsSnapshot = await getDocs(productsRef);
-    const documents = documentsSnapshot.docs;
+    const documents = documentsSnapshot.docs
     const producto = documents.map(item => ({ ...item.data(), id: item.id }));
     return (producto);
 }
