@@ -1,5 +1,5 @@
 import './FormCompra.css'
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 function FormCompra() {
     const nombre = useRef()
@@ -8,6 +8,9 @@ function FormCompra() {
     const celular = useRef()
     const direccion = useRef()
     const cP = useRef()
+
+    const [datosUsuario, setDatosUsuario] = useState({})
+    console.log(datosUsuario)
 
     function handleForm(e){
         e.preventDefault();
@@ -20,8 +23,8 @@ function FormCompra() {
             direccion: direccion.current.value,
             codigoP: cP.current.value,
         };
+        setDatosUsuario(dataUser)
         e.target.reset()
-        console.log(dataUser);
     }
 
     return (
