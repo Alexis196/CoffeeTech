@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './FormCompra.css'
+import { toast } from 'react-toastify';
 
 function FormCompra({ onSubmit }) {
     const nombre = useRef();
@@ -21,6 +22,16 @@ function FormCompra({ onSubmit }) {
             codigoP: cP.current.value,
         };
         onSubmit(dataUser);
+        toast.info('Estamos verificando tu infomación', {
+            position: "top-center",
+            autoClose: 1500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
         e.target.reset()
     }
 

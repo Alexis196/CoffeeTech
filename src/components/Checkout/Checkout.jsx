@@ -4,6 +4,7 @@ import FormCompra from '../FormCompra/FormCompra';
 import { createOrder } from '../../services/firebase';
 import { CartContext } from '../../context/cartContext';
 import InfoCompra from '../InfoCompra/InfoCompra';
+import { toast } from "react-toastify";
 
 function Checkout() {
     const { cart, getTotalPriceInCart, clearCart } = useContext(CartContext);
@@ -12,10 +13,19 @@ function Checkout() {
 
     async function handleFormSubmit(datosUsuario) {
         if (cart.length === 0) {
-            alert('El carrito está vacío. Agregue productos antes de continuar con la compra.');
+            toast('El carrito está vacío. Agregue productos antes de continuar con la compra', {
+                position: "bottom-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
             return;
         }
-    
+
         const totalPrice = getTotalPriceInCart();
         const newOrderData = {
             item: cart,
@@ -23,19 +33,26 @@ function Checkout() {
             date: new Date(),
             price: totalPrice,
         };
-    
+
         try {
             const idOrder = await createOrder(newOrderData);
-            console.log(newOrderData);
-            console.log('Su código de compra es: ', idOrder);
             setOrderId(idOrder);
-            setOrderData(newOrderData); // Store the orderData in state
+            setOrderData(newOrderData);
             clearCart();
         } catch (error) {
-            alert(`No se pudo realizar la compra ${error.message}`);
+            toast.error(`No se pudo realizar la compra ${error.message}`, {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
         }
     }
-    
+
 
     return (
         <div className="checkout">

@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { toast } from "react-toastify";
 
 const CartContext = createContext({ cart: 0 });
 
@@ -23,6 +24,16 @@ function CartContextProvider(props) {
     }
 
     function deleteItem(item) {
+        toast.success('Quitaste un producto con éxito', {
+            position: "bottom-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
         const newCart = cart.map(cartItem => {
             if (cartItem.id === item.id) {
                 if (cartItem.count > 1) {
@@ -38,6 +49,16 @@ function CartContextProvider(props) {
     }
 
     function clearCart(event) {
+        toast.success('Los productos se eliminaron correctamente', {
+            position: "bottom-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
         return setCart([])
     }
 

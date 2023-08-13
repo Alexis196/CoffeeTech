@@ -4,6 +4,9 @@ import { getProductData } from '../../services/firebase'
 import { useState, useEffect } from 'react'
 import { useContext } from 'react'
 import { CartContext } from '../../context/cartContext';
+import { toast } from 'react-toastify';
+
+
 
 function ItemDetail() {
     const [product, setProduct] = useState([]);
@@ -35,8 +38,18 @@ function ItemDetail() {
 
     function handleAddCart() {
         addCart(product, count);
-        alert('Producto agregado al carrito');
+        toast.success('Se agregaron productos al carrito', {
+            position: "bottom-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
     }
+    
 
     return (
         <div className='content-detail'>

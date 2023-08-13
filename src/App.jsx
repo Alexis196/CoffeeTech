@@ -6,6 +6,8 @@ import Cart from './components/Cart/Cart'
 import ErrorPage from './components/ErrorPage/ErrorPage'
 import { CartContextProvider } from './context/cartContext';
 import Checkout from './components/Checkout/Checkout'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { initializeApp } from "firebase/app";
 
@@ -15,6 +17,7 @@ function App() {
     <CartContextProvider>
       <BrowserRouter>
         <Navbar />
+        <ToastContainer />
         <Routes>
           <Route path='/' element={<ItemListContainer greeting='Bienvenidos a Coffee Tech' />} />
           <Route path='/item/:id' element={<ItemDetail />} />
