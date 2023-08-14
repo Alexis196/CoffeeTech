@@ -64,7 +64,7 @@ function ItemDetail() {
                     <div className='contador'>
                         <span>Cantidad: </span>
                         <button onClick={handleDis}>-</button>
-                        <span className='count'>{count}</span>
+                        <span id='count'>{count}</span>
                         <button onClick={handleAdd}>+</button>
                     </div>
                     <button className='add-cart' onClick={handleAddCart}>
