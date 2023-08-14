@@ -1,3 +1,4 @@
+
 import React, { useContext, useState, useEffect } from 'react';
 import Cart from '../../assets/img/cart.png';
 import './CartWidget.css';

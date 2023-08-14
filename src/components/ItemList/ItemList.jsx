@@ -7,6 +7,7 @@ function ItemList({product}) {
 
     return(
     <div className='container-items'>
+
         {product.map((item) => (
             <div className='container' key={item.id}>
                 <img src={item.imagen} alt={item.nombre} />

@@ -36,6 +36,7 @@ function ItemDetail() {
         setCount(count + 1);
     }
 
+
     function handleAddCart() {
         addCart(product, count);
         toast.success('Se agregaron productos al carrito', {
