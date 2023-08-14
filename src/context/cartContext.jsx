@@ -49,16 +49,6 @@ function CartContextProvider(props) {
     }
 
     function clearCart(event) {
-        toast.success('Los productos se eliminaron correctamente', {
-            position: "bottom-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-        });
         return setCart([])
     }
 
