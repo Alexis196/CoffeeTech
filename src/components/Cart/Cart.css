@@ -1,0 +1,74 @@
+.div-carrito{
+    width: 60%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.items-modal{
+    width: 100%;
+    margin-top: 10px;
+    padding-bottom: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    border-bottom: 1px solid #05050583;
+}
+.items-modal img{
+    width: 64px;
+}
+.quita-prod{
+    width: 160px;
+    height: 25px;
+    padding: 3px;
+    background-color: #bb0606;
+    color: #fff;
+    font-family: sans-serif;
+    border: 1px solid #000;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.carrito-vacio{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.seccion-carrito{
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+}
+.seccion-carrito span{
+    width: 250px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+.botones-carrito{
+    display: flex;
+    gap: 2rem;
+}
+.clear, .comprar{
+    width: 120px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #fff;
+    cursor: pointer;
+}
+.clear{
+    background-color: #bb0606;
+}
+.comprar{
+    background-color: #04a304;
+}

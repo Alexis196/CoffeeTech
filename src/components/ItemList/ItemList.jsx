@@ -4,8 +4,10 @@ import { useEffect, useState } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
 function ItemList({product}) {
+
     return(
-    <>
+    <div className='container-items'>
+
         {product.map((item) => (
             <div className='container' key={item.id}>
                 <img src={item.imagen} alt={item.nombre} />
@@ -13,7 +15,7 @@ function ItemList({product}) {
                 <Anchor className='anchor' to={`/item/${item.id}`}>Ver más</Anchor>
             </div>
         ))}
-    </>
+    </div>
     )
 }
 

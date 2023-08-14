@@ -1,0 +1,27 @@
+.info-comp{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 18px;
+}
+.info-comp h2{
+    align-self: center;
+}
+.id{
+    font-size: 20px;
+    font-weight: bold;
+}
+.inicio{
+    text-decoration: none;
+    text-align: center;
+    width: 100px;
+    height: 25px;
+    padding: 3px;
+    background-color: #1d98d1;
+    color: #fff;
+    font-size: 20px;
+    font-family: sans-serif;
+    border-radius: 3px;
+    cursor: pointer;
+    align-self: center;
+}

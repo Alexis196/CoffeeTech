@@ -1,0 +1,33 @@
+.form{
+    margin: auto;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 1rem;
+    border: 1px solid #000;
+    padding: 1rem;
+}
+.campos-form{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    border: none;
+    font-size: 18px;
+}
+
+fieldset span{
+    color: #ff0000;
+}
+.enviar{
+    align-self: flex-end;
+    width: 142px;
+    height: 28px;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    background-color: #04a304;;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
