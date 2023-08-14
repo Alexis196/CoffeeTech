@@ -16,6 +16,7 @@
     gap: 1rem;
     border: 1px solid #d3d1d1;
     border-radius: 2px;
+    background-color: #fff;
 }
 
 .detalle>img {
@@ -30,12 +31,12 @@
 }
 .info-product p{
     font-size: 20px;
-    color: #d3d1d1;
+    color: #000;
 }
 .info-product h3{
     font-size: 24px;
     font-weight: 600;
-    color: #d3d1d1;
+    color: #000;
 }
 .contador{
     display: flex;
@@ -44,7 +45,7 @@
 .contador span{
     font-size: 20px;
     font-weight: bold;
-    color: #d3d1d1;
+    color: #000;
 }
 .contador button {
     width: 23px;
@@ -57,7 +58,7 @@
     font-weight: bold;
     cursor: pointer;
 }
-.count{
+#count{
     font-size: 20px;
     width: 44px;
     text-align: center;
