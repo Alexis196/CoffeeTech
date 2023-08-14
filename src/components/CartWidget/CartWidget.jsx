@@ -3,6 +3,7 @@ import Cart from '../../assets/img/cart.png';
 import './CartWidget.css';
 import { CartContext } from '../../context/cartContext';
 
+
 export default function CartWidget() {
     const { totalItemCart } = useContext(CartContext);
 
