@@ -9,19 +9,45 @@ function CartContextProvider(props) {
     function addCart(item, count) {
         if (count > 0) {
             const existingItem = cart.find(existingItem => existingItem.id === item.id);
-
-            if (existingItem) {
-                const newCart = cart.map(existingItem =>
-                    existingItem.id === item.id ? { ...existingItem, count: existingItem.count + count } : existingItem
-                );
-                setCart(newCart);
+            const currentItemCount = existingItem ? existingItem.count : 0;
+            const newItemCount = currentItemCount + count;
+    
+            if (newItemCount <= item.stock) {
+                toast.success('Se agregaron productos al carrito', {
+                    position: "bottom-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                    });
+                if (existingItem) {
+                    const newCart = cart.map(existingItem =>
+                        existingItem.id === item.id ? { ...existingItem, count: newItemCount } : existingItem
+                    );
+                    setCart(newCart);
+                } else {
+                    const newItemInCart = { ...item, count: newItemCount };
+                    const newCart = [...cart, newItemInCart];
+                    setCart(newCart);
+                }
             } else {
-                const newItemInCart = { ...item, count };
-                const newCart = [...cart, newItemInCart];
-                setCart(newCart);
+                toast.error('No hay suficiente stock para agregar más productos', {
+                    position: "bottom-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
             }
         }
     }
+    
 
     function deleteItem(item) {
         toast.success('Quitaste un producto con éxito', {

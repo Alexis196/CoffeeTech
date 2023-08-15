@@ -2,7 +2,6 @@ import './InfoCompra.css';
 import { Link } from 'react-router-dom';
 
 function InfoCompra({ orderData, idOrder }) {
-    console.log('order id', idOrder);
 
     return (
         <div className='info-comp'>
